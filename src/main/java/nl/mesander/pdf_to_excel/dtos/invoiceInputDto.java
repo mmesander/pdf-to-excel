@@ -17,4 +17,11 @@ public class invoiceInputDto {
     private String customerZipcode;
     private String customerCity;
     private String customerCountry;
+
+    private String product;
+    private Double price;
+    private Integer quantity;
+    private Double totalExcludingVat;
+    private Double totalVat;
+    private Double totalIncludingVat;
 }
