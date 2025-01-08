@@ -67,7 +67,7 @@ public class InvoiceService {
 //    public List<InvoiceDto> getInvoicesByFilter() {}
 
     public InvoiceDto createInvoice(InvoiceInputDto inputDto) {
-        Invoice invoice = new Invoice();
+        Invoice invoice = dtoToInvoice(inputDto);
 
         boolean invoiceNumberExists = invoiceRepository.existsById(inputDto.getInvoiceNumber());
 
