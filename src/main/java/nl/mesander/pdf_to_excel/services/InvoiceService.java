@@ -25,7 +25,6 @@ public class InvoiceService {
         Invoice invoice = new Invoice();
 
         copyProperties(inputDto, invoice);
-        invoice.setInvoiceNumber(inputDto.getInvoiceNumber().toUpperCase());
 
         return invoice;
     }

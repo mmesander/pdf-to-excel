@@ -25,4 +25,9 @@ public class InvoiceDto implements IdentifiableInvoiceNumber {
     private Double totalExcludingVat;
     private Double totalVat;
     private Double totalIncludingVat;
+
+    @Override
+    public String getInvoiceNumber() {
+        return this.invoiceNumber;
+    }
 }
