@@ -1,4 +1,4 @@
-package nl.mesander.pdf_to_excel.dtos;
+package nl.mesander.pdf_to_excel.dtos.input;
 
 // Imports
 import lombok.Getter;
@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class invoiceInputDto {
+public class InvoiceInputDto {
     private String invoiceNumber;
     private String invoiceDate;
     private String orderNumber;
