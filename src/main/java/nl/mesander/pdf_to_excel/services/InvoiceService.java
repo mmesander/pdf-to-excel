@@ -2,6 +2,7 @@ package nl.mesander.pdf_to_excel.services;
 
 import nl.mesander.pdf_to_excel.dtos.input.InvoiceInputDto;
 import nl.mesander.pdf_to_excel.dtos.output.InvoiceDto;
+import nl.mesander.pdf_to_excel.exceptions.RecordNotFoundException;
 import nl.mesander.pdf_to_excel.models.Invoice;
 import nl.mesander.pdf_to_excel.repositories.InvoiceRepository;
 
@@ -49,12 +50,12 @@ public class InvoiceService {
 
     public InvoiceDto getInvoice(String invoiceNumber) {
          String invoiceNumberUppercase = invoiceNumber.toUpperCase();
+
+         Invoice invoice = invoiceRepository.findById(invoiceNumberUppercase)
+                 .orElseThrow(() -> new RecordNotFoundException(invoiceNumberUppercase));
+
+         return invoiceToDto(invoice);
     }
-
-
-
-
-
 
     public List<InvoiceDto> getInvoicesByFilter() {}
     public InvoiceDto createInvoice() {}
