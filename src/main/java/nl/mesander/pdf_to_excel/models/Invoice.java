@@ -1,5 +1,6 @@
 package nl.mesander.pdf_to_excel.models;
 
+// Imports
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
