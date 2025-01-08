@@ -7,10 +7,12 @@ import nl.mesander.pdf_to_excel.exceptions.InvalidInputException;
 import nl.mesander.pdf_to_excel.exceptions.RecordNotFoundException;
 import nl.mesander.pdf_to_excel.models.Invoice;
 import nl.mesander.pdf_to_excel.repositories.InvoiceRepository;
+import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import static nl.mesander.pdf_to_excel.helpers.CopyProperties.copyProperties;
 
+@Service
 public class InvoiceService {
     private final InvoiceRepository invoiceRepository;
 
@@ -37,7 +39,7 @@ public class InvoiceService {
     }
 
     // CRUD Methods
-    public List<InvoiceDto> getInvoices() {
+    public List<InvoiceDto> getAllInvoices() {
         List<Invoice> invoices = invoiceRepository.findAll();
         List<InvoiceDto> invoiceDtos = new ArrayList<>();
 

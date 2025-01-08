@@ -3,10 +3,11 @@ package nl.mesander.pdf_to_excel.dtos.output;
 // Imports
 import lombok.Getter;
 import lombok.Setter;
+import nl.mesander.pdf_to_excel.interfaces.IdentifiableInvoiceNumber;
 
 @Getter
 @Setter
-public class InvoiceDto {
+public class InvoiceDto implements IdentifiableInvoiceNumber {
     private String invoiceNumber;
     private String invoiceDate;
     private String orderNumber;
