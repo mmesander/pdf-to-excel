@@ -4,8 +4,6 @@ package nl.mesander.pdf_to_excel.dtos;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.sql.Date;
-
 @Getter
 @Setter
 public class invoiceInputDto {
