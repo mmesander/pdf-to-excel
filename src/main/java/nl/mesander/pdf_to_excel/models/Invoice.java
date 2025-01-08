@@ -18,12 +18,14 @@ public class Invoice {
     @Column(nullable = false, unique = true)
     private String invoiceNumber;
 
+    // Moet een timestamp worden
     @Column(nullable = false)
     private String invoiceDate;
 
     @Column(nullable = false)
     private String orderNumber;
 
+    // Moet een timestamp worden
     @Column(nullable = false)
     private String orderDate;
 
